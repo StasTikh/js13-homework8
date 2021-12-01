@@ -68,6 +68,13 @@ const chinaSigns = [
                 if (today < dobnow) {
                 fullAge = fullAge-1;
                 }
+                if(fullAge[-1] == 1) {
+                  fullAge = fullAge + " год"
+                }else if(fullAge[-1] > 1 && fullAge[-1] <=4){
+                  fullAge = fullAge + "года"
+                } else {
+                  fullAge = fullAge + " лет"
+                }
                 fullAge = fullAge.toString();
                 let allDate = [];
                 if ((date.getMonth()+1) > 0 && (date.getMonth()+1) < 9){
